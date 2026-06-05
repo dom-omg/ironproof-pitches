@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IRONPROOF × KPMG Canada — Partnership Proposal</title>
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+@page {
+  size: A4;
+  margin: 0;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --ink:        #0C1B33;
+  --navy:       #0C2340;
+  --navy-mid:   #1A3A5C;
+  --blue:       #005EB8;
+  --blue-light: #EBF4FF;
+  --blue-mid:   #BFDBFE;
+  --gold:       #C49A00;
+  --gold-light: #FEF9E7;
+  --steel:      #5C6F85;
+  --border:     #DDE4ED;
+  --white:      #FFFFFF;
+  --bg:         #F4F7FA;
+  --green:      #047857;
+  --green-bg:   #ECFDF5;
+  --red:        #DC2626;
+  --mono:       'IBM Plex Mono', 'Courier New', monospace;
+  --sans:       'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
+}
+
+body {
+  font-family: var(--sans);
+  font-size: 9.5pt;
+  line-height: 1.6;
+  color: var(--ink);
+  background: var(--white);
+}
+
+/* ── HERO ── */
+.hero {
+  background: var(--navy);
+  color: var(--white);
+  padding: 36pt 32pt 28pt;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0; right: 0;
+  width: 260pt; height: 100%;
+  background: linear-gradient(135deg, transparent 30%, rgba(0,94,184,0.18) 100%);
+  pointer-events: none;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -1pt; left: 0; right: 0;
+  height: 3pt;
+  background: linear-gradient(90deg, var(--blue) 0%, #60A5FA 40%, var(--gold) 100%);
+}
+
+.hero-eyebrow {
+  font-family: var(--mono);
+  font-size: 7pt;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #7FBAED;
+  margin-bottom: 10pt;
+}
+
+.hero h1 {
+  font-size: 26pt;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+  color: var(--white);
+  margin-bottom: 8pt;
+}
+
+.hero h1 span {
+  color: #7FBAED;
+}
+
+.hero h1 em {
+  font-style: normal;
+  color: #C9A227;
+}
+
+.hero-subtitle {
+  font-size: 11pt;
+  font-weight: 300;
+  color: #8FA8C0;
+  margin-bottom: 22pt;
+  max-width: 400pt;
+}
+
+.hero-meta {
+  display: flex;
+  gap: 24pt;
+  flex-wrap: wrap;
+}
+
+.hero-meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2pt;
+}
+
+.hero-meta-label {
+  font-family: var(--mono);
+  font-size: 6.5pt;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #4A7A9B;
+}
+
+.hero-meta-value {
+  font-size: 8.5pt;
+  font-weight: 500;
+  color: #B8CDD9;
+}
+
+/* ── BODY ── */
+.body {
+  padding: 28pt 32pt;
+}
+
+/* ── SECTION ── */
+.section {
+  margin-bottom: 26pt;
+  page-break-inside: avoid;
+}
+
+.section-label {
+  font-family: var(--mono);
+  font-size: 6.5pt;
+  font-weight: 600;
+  letter-spacing: 0.20em;
+  text-transform: uppercase;
+  color: var(--blue);
+  margin-bottom: 4pt;
+}
+
+h2 {
+  font-size: 14pt;
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+  margin-bottom: 10pt;
+  padding-bottom: 8pt;
+  border-bottom: 1.5pt solid var(--border);
+}
+
+h3 {
+  font-size: 10pt;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 14pt 0 6pt;
+  display: flex;
+  align-items: center;
+  gap: 8pt;
+}
+
+h3::before {
+  content: '';
+  display: inline-block;
+  width: 3pt;
+  height: 12pt;
+  background: var(--blue);
+  border-radius: 1.5pt;
+  flex-shrink: 0;
+}
+
+p {
+  margin-bottom: 7pt;
+  color: #1E293B;
+}
+
+/* ── TRANSFORM BOX ── */
+.transform-box {
+  display: grid;
+  grid-template-columns: 1fr 36pt 1fr;
+  gap: 0;
+  align-items: stretch;
+  margin: 14pt 0;
+  border: 1pt solid var(--border);
+  border-radius: 6pt;
+  overflow: hidden;
+}
+
+.transform-col {
+  padding: 12pt 14pt;
+  background: var(--bg);
+}
+
+.transform-col.after {
+  background: var(--blue-light);
+}
+
+.transform-col-label {
+  font-family: var(--mono);
+  font-size: 6pt;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--steel);
+  margin-bottom: 6pt;
+}
+
+.transform-col.after .transform-col-label {
+  color: var(--blue);
+}
+
+.transform-col-heading {
+  font-size: 9pt;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 5pt;
+}
+
+.transform-col.after .transform-col-heading {
+  color: var(--blue);
+}
+
+.transform-col p {
+  font-size: 8pt;
+  color: #475569;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.transform-col.after p {
+  color: #1E40AF;
+}
+
+.transform-arrow {
+  background: var(--navy);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--blue-mid);
+  font-size: 16pt;
+  font-weight: 300;
+}
+
+/* ── ANGLE CARDS ── */
+.angle-list {
+  list-style: none;
+  margin: 12pt 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8pt;
+}
+
+.angle-card {
+  border: 1pt solid var(--border);
+  border-radius: 4pt;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 6pt 1fr;
+}
+
+.angle-card-accent {
+  background: var(--blue);
+}
+
+.angle-card-accent.gold { background: var(--gold); }
+.angle-card-accent.navy { background: var(--navy-mid); }
+
+.angle-card-body {
+  padding: 10pt 14pt;
+  background: var(--white);
+}
+
+.angle-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 5pt;
+}
+
+.angle-card-title {
+  font-size: 9.5pt;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.angle-card-tag {
+  font-family: var(--mono);
+  font-size: 6.5pt;
+  font-weight: 600;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  padding: 2pt 6pt;
+  border-radius: 2pt;
+  background: var(--blue-light);
+  color: var(--blue);
+}
+
+.angle-card-tag.fast {
+  background: var(--green-bg);
+  color: var(--green);
+}
+
+.angle-card-tag.signal {
+  background: var(--gold-light);
+  color: var(--gold);
+}
+
+.angle-card-desc {
+  font-size: 8.5pt;
+  color: #334155;
+  margin: 0 0 5pt;
+  line-height: 1.5;
+}
+
+.angle-card-metric {
+  font-family: var(--mono);
+  font-size: 7.5pt;
+  color: var(--steel);
+  border-top: 0.5pt solid var(--border);
+  padding-top: 5pt;
+  margin-top: 4pt;
+}
+
+/* ── PROOF COMPARE ── */
+.proof-compare {
+  margin: 14pt 0;
+}
+
+.proof-compare-label {
+  font-family: var(--mono);
+  font-size: 7pt;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--steel);
+  margin-bottom: 6pt;
+}
+
+.proof-quote {
+  border: 1pt solid var(--border);
+  border-radius: 4pt;
+  padding: 10pt 14pt;
+  margin-bottom: 6pt;
+  font-size: 8.5pt;
+  font-style: italic;
+  color: #475569;
+  background: var(--bg);
+  position: relative;
+}
+
+.proof-quote-label {
+  font-family: var(--mono);
+  font-size: 6pt;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--steel);
+  font-style: normal;
+  margin-bottom: 4pt;
+}
+
+.proof-quote.new {
+  background: var(--blue-light);
+  border-color: var(--blue);
+  color: #1E3A5F;
+  font-style: normal;
+}
+
+.proof-quote.new .proof-quote-label {
+  color: var(--blue);
+}
+
+.proof-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4pt;
+  background: var(--green-bg);
+  color: var(--green);
+  font-family: var(--mono);
+  font-size: 7pt;
+  font-weight: 600;
+  padding: 2pt 8pt;
+  border-radius: 2pt;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-top: 6pt;
+}
+
+.proof-badge::before { content: '●'; font-size: 5pt; }
+
+/* ── STAT ROW ── */
+.stat-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10pt;
+  margin: 12pt 0;
+}
+
+.stat-box {
+  background: var(--navy);
+  border-radius: 4pt;
+  padding: 10pt 12pt;
+  text-align: center;
+}
+
+.stat-box-value {
+  font-size: 15pt;
+  font-weight: 700;
+  color: #7FBAED;
+  font-family: var(--mono);
+  line-height: 1;
+  margin-bottom: 4pt;
+}
+
+.stat-box-label {
+  font-size: 7pt;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.10em;
+  color: #8FA8C0;
+}
+
+/* ── CALLOUT ── */
+.callout {
+  background: var(--blue-light);
+  border-left: 3pt solid var(--blue);
+  border-radius: 0 4pt 4pt 0;
+  padding: 10pt 14pt;
+  margin: 12pt 0;
+}
+
+.callout p {
+  margin: 0;
+  font-size: 9.5pt;
+  color: #1E3A5F;
+  font-weight: 500;
+}
+
+.callout-gold {
+  background: var(--gold-light);
+  border-left: 3pt solid var(--gold);
+  border-radius: 0 4pt 4pt 0;
+  padding: 10pt 14pt;
+  margin: 12pt 0;
+}
+
+.callout-gold p {
+  margin: 0;
+  font-size: 9.5pt;
+  color: #78540A;
+  font-weight: 500;
+}
+
+/* ── PILOT BOX ── */
+.pilot-box {
+  background: var(--navy);
+  color: var(--white);
+  border-radius: 6pt;
+  padding: 16pt 20pt;
+  margin: 14pt 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.pilot-box::before {
+  content: '';
+  position: absolute;
+  top: 0; right: 0;
+  width: 120pt; height: 100%;
+  background: linear-gradient(135deg, transparent, rgba(0,94,184,0.15));
+}
+
+.pilot-box-label {
+  font-family: var(--mono);
+  font-size: 6.5pt;
+  letter-spacing: 0.18em;
+  color: #7FBAED;
+  text-transform: uppercase;
+  margin-bottom: 6pt;
+}
+
+.pilot-box h3 {
+  font-size: 11pt;
+  font-weight: 700;
+  color: var(--white);
+  margin: 0 0 8pt;
+}
+
+.pilot-box h3::before { display: none; }
+
+.pilot-box p {
+  font-size: 8.5pt;
+  color: #8FA8C0;
+  margin-bottom: 5pt;
+  line-height: 1.55;
+}
+
+.pilot-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4pt;
+  background: rgba(0,94,184,0.25);
+  color: #7FBAED;
+  font-family: var(--mono);
+  font-size: 7.5pt;
+  font-weight: 600;
+  padding: 3pt 10pt;
+  border-radius: 2pt;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-top: 6pt;
+}
+
+/* ── ASKS ── */
+.ask-list {
+  list-style: none;
+  margin: 10pt 0;
+}
+
+.ask-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10pt;
+  padding: 9pt 12pt;
+  border: 1pt solid var(--border);
+  border-radius: 4pt;
+  margin-bottom: 6pt;
+  background: var(--bg);
+}
+
+.ask-num {
+  font-family: var(--mono);
+  font-size: 9pt;
+  font-weight: 700;
+  color: var(--blue);
+  min-width: 14pt;
+  text-align: center;
+  padding-top: 1pt;
+}
+
+.ask-text {
+  font-size: 8.5pt;
+  color: var(--ink);
+  line-height: 1.5;
+}
+
+.ask-text strong {
+  font-weight: 600;
+  color: var(--ink);
+  display: block;
+  margin-bottom: 2pt;
+}
+
+/* ── WHO WE ARE ── */
+.who-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8pt;
+  margin: 12pt 0;
+}
+
+.who-card {
+  border: 1pt solid var(--border);
+  border-radius: 4pt;
+  padding: 9pt 12pt;
+  background: var(--bg);
+}
+
+.who-card-label {
+  font-family: var(--mono);
+  font-size: 6.5pt;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--steel);
+  margin-bottom: 4pt;
+}
+
+.who-card-value {
+  font-size: 8.5pt;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 2pt;
+}
+
+.who-card-sub {
+  font-size: 7.5pt;
+  color: var(--steel);
+}
+
+/* ── FOOTER ── */
+.footer {
+  background: var(--navy);
+  color: #4A7A9B;
+  padding: 10pt 32pt;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--mono);
+  font-size: 7pt;
+  letter-spacing: 0.08em;
+}
+
+.footer-brand {
+  color: #8FA8C0;
+  font-weight: 500;
+}
+
+/* ── PRINT ── */
+@media print {
+  .hero, .pilot-box, .footer, .stat-box { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .transform-arrow, .transform-col.after { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .proof-quote.new, .callout, .callout-gold { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .angle-card-accent { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}
+
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-eyebrow">Partnership Proposal · Confidential · 2026-06-05</div>
+  <h1>IRONPROOF <span>×</span> KPMG <em>Canada</em></h1>
+  <div class="hero-subtitle">Making Audit Evidence Machine-Verifiable</div>
+  <div class="hero-meta">
+    <div class="hero-meta-item">
+      <span class="hero-meta-label">From</span>
+      <span class="hero-meta-value">QreativeLab — Proof-Based Security Infrastructure</span>
+    </div>
+    <div class="hero-meta-item">
+      <span class="hero-meta-label">Contact</span>
+      <span class="hero-meta-value">dominik@qreativelab.io</span>
+    </div>
+    <div class="hero-meta-item">
+      <span class="hero-meta-label">Classification</span>
+      <span class="hero-meta-value">Confidential / BD Use Only</span>
+    </div>
+  </div>
+</div>
+
+<!-- BODY -->
+<div class="body">
+
+  <!-- THE INSIGHT -->
+  <div class="section">
+    <div class="section-label">01 — The Structural Insight</div>
+    <h2>KPMG Sells Trust. Trust Has Never Been Machine-Verifiable. Until Now.</h2>
+
+    <p>Every cybersecurity and compliance deliverable KPMG has ever produced is a PDF signed by humans. A federal client reads <em>"our team assessed the system and found no critical vulnerabilities"</em> — and must trust KPMG's opinion. They file the report. The contract closes.</p>
+
+    <p>There is no independent verification mechanism. Nobody can check the work without running the audit again. The product of every audit firm on Earth is, structurally, a human opinion formatted as a document.</p>
+
+    <div class="transform-box">
+      <div class="transform-col">
+        <div class="transform-col-label">Current KPMG Audit Deliverable</div>
+        <div class="transform-col-heading">Human Opinion. PDF Format.</div>
+        <p>"Our team assessed the system and found no critical vulnerabilities in the authentication layer during the assessment period."</p>
+      </div>
+      <div class="transform-arrow">→</div>
+      <div class="transform-col after">
+        <div class="transform-col-label">IRONPROOF-Backed Deliverable</div>
+        <div class="transform-col-heading">Mathematical Proof. Machine-Verifiable.</div>
+        <p>"Z3 SMT formal verification produced UNSAT certificate #A4F2-ML-DSA-65. No invariant violation was provable under the declared threat model. Certificate independently verifiable at [endpoint]. No trust in KPMG required."</p>
+      </div>
+    </div>
+
+    <div class="callout">
+      <p>KPMG + IRONPROOF = the first audit firm in the world that can issue unfalsifiable certificates. This is not a feature upgrade. It is a new product category.</p>
+    </div>
+  </div>
+
+  <!-- THREE ANGLES -->
+  <div class="section">
+    <div class="section-label">02 — Three Partnership Angles</div>
+    <h2>By Priority Order. Pick One. All Three Are Viable.</h2>
+
+    <ul class="angle-list">
+
+      <div class="angle-card">
+        <div class="angle-card-accent"></div>
+        <div class="angle-card-body">
+          <div class="angle-card-header">
+            <span class="angle-card-title">Channel Partner — The Primary Play</span>
+            <span class="angle-card-tag fast">Fastest to Revenue</span>
+          </div>
+          <div class="angle-card-desc">KPMG embeds IRONPROOF as a service in its cyber and compliance mandates for federal government clients. Every mandate that currently delivers a PDF risk report now delivers — alongside the report — a machine-verifiable proof artifact signed with ML-DSA-65 post-quantum cryptography. No new sales cycle for KPMG. Enter an active mandate as a subcontractor. The BD team has already sold the mandate.</div>
+          <div class="angle-card-metric">Revenue path: 30–90 days → subcontractor on active DND/RCMP/CRA mandate · Platform license per engagement or revenue share</div>
+        </div>
+      </div>
+
+      <div class="angle-card">
+        <div class="angle-card-accent gold"></div>
+        <div class="angle-card-body">
+          <div class="angle-card-header">
+            <span class="angle-card-title">Validation Signal — The Credibility Multiplier</span>
+            <span class="angle-card-tag signal">Strategic Value</span>
+          </div>
+          <div class="angle-card-desc">KPMG validates IRONPROOF before our Blackpoint investment closing. "KPMG-validated" on a proof-based security platform targeted at DND, RCMP, and CSIS-adjacent clients is an institutional signal that triggers trust in every federal procurement officer who sees the deck. One technical review, one letter. For KPMG: first-mover positioning as the firm that validated proof-based security before it became the standard.</div>
+          <div class="angle-card-metric">Cost to KPMG: technical review + one letter · Return: first-mover positioning in an emerging category</div>
+        </div>
+      </div>
+
+      <div class="angle-card">
+        <div class="angle-card-accent navy"></div>
+        <div class="angle-card-body">
+          <div class="angle-card-header">
+            <span class="angle-card-title">Direct Client — Forensics Intelligence</span>
+            <span class="angle-card-tag">Strategic</span>
+          </div>
+          <div class="angle-card-desc">KPMG's forensics practice — financial crime investigations, blockchain fraud, asset tracing — needs exactly what QreativeLab's TRACE and SENTINEL systems already do. Blockchain forensics across 12 chains, autonomous investigation agents, ML-DSA-65 signed evidence bundles export-ready for legal proceedings. TRACE is deployed and live. SENTINEL has been demonstrated in an operational context. A forensics analyst doing manual chain analysis today can have autonomous, multi-chain, court-ready evidence bundles tomorrow.</div>
+          <div class="angle-card-metric">TRACE: 12 chains, live · SENTINEL: autonomous investigation → signed PDF bundle · Direct revenue path independent of channel agreement</div>
+        </div>
+      </div>
+
+    </ul>
+  </div>
+
+  <!-- SOVEREIGN AI -->
+  <div class="section">
+    <div class="section-label">03 — The Sovereign AI Governance Angle</div>
+    <h2>KPMG's Federal Practice Needs a Proof Layer for AI.</h2>
+
+    <p>Canada's federal government is under pressure to demonstrate sovereign AI governance — provably Canadian-controlled systems, post-quantum cryptography readiness, machine-verifiable compliance artifacts for AI behavior.</p>
+
+    <p>KPMG's government advisory practice is the primary channel for this transition. The problem: KPMG cannot currently certify AI behavior. You can audit process. You cannot produce machine-verifiable guarantees on AI output. The deputy minister asks "is our AI system safe?" — KPMG delivers a consulting report. The report expires as soon as the model updates.</p>
+
+    <div class="proof-compare">
+      <div class="proof-compare-label">What Changes With VERDICT ENGINE</div>
+      <div class="proof-quote">
+        <div class="proof-quote-label">Today — KPMG AI Risk Report</div>
+        "Based on our assessment of the model's training data, deployment architecture, and testing protocols, we conclude that the system presents low risk of producing outputs that violate declared policy constraints."
+      </div>
+      <div class="proof-quote new">
+        <div class="proof-quote-label">KPMG + IRONPROOF VERDICT ENGINE</div>
+        "Z3 formal verification of AI behavioral invariants confirmed: system outputs operate within declared policy constraints under all tested input distributions. Behavioral envelope enforced at inference time, not audited post-hoc. UNSAT certificate #V9F1-ML-DSA-65. Certificate cryptographically bound to model version SHA-256: [hash]. Independently verifiable. Does not expire."
+        <div class="proof-badge">Machine-verifiable · Post-quantum signed · Canadian-sovereign</div>
+      </div>
+    </div>
+
+    <div class="callout-gold">
+      <p>KPMG + VERDICT ENGINE = the advisory firm that can tell a DND deputy minister: "Your AI system's behavior is mathematically constrained, and here is the proof." No other Big 4 firm can offer this. The window is now.</p>
+    </div>
+  </div>
+
+  <!-- CANADA ADVANTAGE -->
+  <div class="section">
+    <div class="section-label">04 — The Canadian Structural Advantage</div>
+    <h2>Federal Procurement. Sovereign Stack. No Foreign Dependency.</h2>
+
+    <div class="stat-row">
+      <div class="stat-box">
+        <div class="stat-box-value">YYZ</div>
+        <div class="stat-box-label">Infrastructure on<br>Canadian soil only</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-box-value">ML-DSA</div>
+        <div class="stat-box-label">Post-quantum cryptography<br>NIST-standardized 2024</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-box-value">CA</div>
+        <div class="stat-box-label">Canadian-controlled stack<br>2025 Sovereignty directives</div>
+      </div>
+    </div>
+
+    <p>Canada's 2025 Digital Sovereignty Procurement directives require Canadian-controlled AI certification stacks for all DND, NRC, CSA, and CSIS-adjacent digital infrastructure programs. KPMG's federal clients are subject to these requirements. KPMG needs a sovereign-by-design proof platform to serve them. QreativeLab is that platform.</p>
+  </div>
+
+  <!-- THE PILOT -->
+  <div class="pilot-box">
+    <div class="pilot-box-label">05 — The Pilot Offer</div>
+    <h3>One Active Federal Mandate. Thirty Days. Free.</h3>
+    <p>One active federal cyber or compliance mandate. We deliver proof artifacts alongside KPMG's standard report. The client's technical team can verify the artifact independently — by design, without calling KPMG or us. No external dependency on trust.</p>
+    <p>If the client validates the artifact — which they will, because the proof speaks for itself — KPMG has a new standard for what a certification deliverable looks like. KPMG co-signs it. We provide the infrastructure. The mandate gets better. The client gets more value. The channel agreement follows.</p>
+    <div class="pilot-tag">Free for the pilot · Channel agreement terms to follow</div>
+  </div>
+
+  <!-- WHO WE ARE -->
+  <div class="section">
+    <div class="section-label">06 — QreativeLab</div>
+    <h2>We Are Not Building Toward Proof Intelligence. We Have Already Built It.</h2>
+
+    <div class="who-grid">
+      <div class="who-card">
+        <div class="who-card-label">Infrastructure</div>
+        <div class="who-card-value">Canadian-sovereign · Fly.io YYZ</div>
+        <div class="who-card-sub">No US cloud dependency. Digital Sovereignty compliant.</div>
+      </div>
+      <div class="who-card">
+        <div class="who-card-label">Cryptography</div>
+        <div class="who-card-value">ML-DSA-65 · ML-KEM-768 · Post-quantum</div>
+        <div class="who-card-sub">NIST-standardized 2024. Future-proof against quantum adversaries.</div>
+      </div>
+      <div class="who-card">
+        <div class="who-card-label">Demonstrated</div>
+        <div class="who-card-value">CanSec Ottawa · May 2026</div>
+        <div class="who-card-sub">National security venue. DND-adjacent audience. Live demo.</div>
+      </div>
+      <div class="who-card">
+        <div class="who-card-label">Systems in Production</div>
+        <div class="who-card-value">PROOFNODE · VERDICT ENGINE · TRACE · SENTINEL</div>
+        <div class="who-card-sub">All systems deployed. All committed. All running today.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- THE ASKS -->
+  <div class="section">
+    <div class="section-label">07 — Three Asks</div>
+    <h2>What We Need to Move Forward</h2>
+
+    <ul class="ask-list">
+      <li>
+        <span class="ask-num">01</span>
+        <span class="ask-text">
+          <strong>Introduction to KPMG Canada's Cyber Practice Leader — Toronto or Ottawa</strong>
+          One conversation, 30 minutes. We explain the channel partner model and the pilot offer. No deck required — the demo speaks for itself.
+        </span>
+      </li>
+      <li>
+        <span class="ask-num">02</span>
+        <span class="ask-text">
+          <strong>One active federal mandate for a proof artifact pilot — 30 days, no cost to KPMG</strong>
+          Identify a mandate where the client has asked for stronger certification evidence. We deliver the proof artifact alongside the standard KPMG report. If the client validates it, we proceed to a channel agreement.
+        </span>
+      </li>
+      <li>
+        <span class="ask-num">03</span>
+        <span class="ask-text">
+          <strong>A KPMG validation letter for IRONPROOF ahead of a major investor closing</strong>
+          Following a successful technical review of our proof stack. The letter confirms KPMG's assessment of the methodology and the production deployment. Not a commercial endorsement — a technical validation.
+        </span>
+      </li>
+    </ul>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <span class="footer-brand">IRONPROOF — QreativeLab</span>
+  <span>dominik@qreativelab.io</span>
+  <span>Confidential · 2026-06-05</span>
+</div>
+
+</body>
+</html>

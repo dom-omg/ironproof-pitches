@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IRONPROOF × Unity Technologies — Partnership Proposal</title>
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+@page {
+  size: A4;
+  margin: 0;
+}
+
+@page :first {
+  margin: 0;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --ink:       #0A0E1A;
+  --blue:      #2563EB;
+  --blue-dark: #1D4ED8;
+  --blue-light:#EFF6FF;
+  --blue-mid:  #DBEAFE;
+  --steel:     #64748B;
+  --border:    #E2E8F0;
+  --white:     #FFFFFF;
+  --bg:        #F8FAFC;
+  --green:     #059669;
+  --green-bg:  #ECFDF5;
+  --mono:      'IBM Plex Mono', 'Courier New', monospace;
+  --sans:      'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
+}
+
+body {
+  font-family: var(--sans);
+  font-size: 9.5pt;
+  line-height: 1.6;
+  color: var(--ink);
+  background: var(--white);
+}
+
+/* ── HERO ── */
+.hero {
+  background: var(--ink);
+  color: var(--white);
+  padding: 36pt 32pt 30pt;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0; right: 0;
+  width: 280pt;
+  height: 100%;
+  background: linear-gradient(135deg, transparent 40%, rgba(37,99,235,0.15) 100%);
+  pointer-events: none;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -1pt; left: 0; right: 0;
+  height: 3pt;
+  background: linear-gradient(90deg, var(--blue) 0%, #60A5FA 50%, var(--blue) 100%);
+}
+
+.hero-eyebrow {
+  font-family: var(--mono);
+  font-size: 7pt;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #60A5FA;
+  margin-bottom: 10pt;
+}
+
+.hero h1 {
+  font-size: 26pt;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+  color: var(--white);
+  margin-bottom: 8pt;
+}
+
+.hero h1 span {
+  color: #60A5FA;
+}
+
+.hero-subtitle {
+  font-size: 11pt;
+  font-weight: 300;
+  color: #94A3B8;
+  margin-bottom: 22pt;
+  max-width: 420pt;
+}
+
+.hero-meta {
+  display: flex;
+  gap: 24pt;
+  flex-wrap: wrap;
+}
+
+.hero-meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2pt;
+}
+
+.hero-meta-label {
+  font-family: var(--mono);
+  font-size: 6.5pt;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #64748B;
+}
+
+.hero-meta-value {
+  font-size: 8.5pt;
+  font-weight: 500;
+  color: #CBD5E1;
+}
+
+/* ── BODY ── */
+.body {
+  padding: 28pt 32pt;
+}
+
+/* ── SECTION ── */
+.section {
+  margin-bottom: 26pt;
+  page-break-inside: avoid;
+}
+
+.section-label {
+  font-family: var(--mono);
+  font-size: 6.5pt;
+  font-weight: 600;
+  letter-spacing: 0.20em;
+  text-transform: uppercase;
+  color: var(--blue);
+  margin-bottom: 4pt;
+}
+
+h2 {
+  font-size: 14pt;
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+  margin-bottom: 10pt;
+  padding-bottom: 8pt;
+  border-bottom: 1.5pt solid var(--border);
+}
+
+h3 {
+  font-size: 10pt;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 14pt 0 6pt;
+  display: flex;
+  align-items: center;
+  gap: 8pt;
+}
+
+h3::before {
+  content: '';
+  display: inline-block;
+  width: 3pt;
+  height: 12pt;
+  background: var(--blue);
+  border-radius: 1.5pt;
+  flex-shrink: 0;
+}
+
+p {
+  margin-bottom: 7pt;
+  color: #1E293B;
+}
+
+/* ── CALLOUT ── */
+.callout {
+  background: var(--blue-light);
+  border-left: 3pt solid var(--blue);
+  border-radius: 0 4pt 4pt 0;
+  padding: 10pt 14pt;
+  margin: 12pt 0;
+}
+
+.callout p {
+  margin: 0;
+  font-size: 9.5pt;
+  color: #1E40AF;
+  font-weight: 500;
+}
+
+.callout-dark {
+  background: var(--ink);
+  border-left: 3pt solid #60A5FA;
+  border-radius: 0 4pt 4pt 0;
+  padding: 10pt 14pt;
+  margin: 12pt 0;
+}
+
+.callout-dark p {
+  margin: 0;
+  font-size: 9.5pt;
+  color: #E2E8F0;
+  font-style: italic;
+}
+
+/* ── STAT ROW ── */
+.stat-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12pt;
+  margin: 14pt 0;
+}
+
+.stat-box {
+  background: var(--bg);
+  border: 1pt solid var(--border);
+  border-radius: 4pt;
+  padding: 10pt 12pt;
+  text-align: center;
+}
+
+.stat-box-value {
+  font-size: 16pt;
+  font-weight: 700;
+  color: var(--blue);
+  font-family: var(--mono);
+  line-height: 1;
+  margin-bottom: 4pt;
+}
+
+.stat-box-label {
+  font-size: 7pt;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.10em;
+  color: var(--steel);
+}
+
+/* ── SYSTEM CARDS ── */
+.system-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10pt;
+  margin: 14pt 0;
+}
+
+.system-card {
+  background: var(--white);
+  border: 1pt solid var(--border);
+  border-radius: 4pt;
+  overflow: hidden;
+}
+
+.system-card-header {
+  background: var(--ink);
+  color: var(--white);
+  padding: 8pt 10pt;
+}
+
+.system-card-name {
+  font-family: var(--mono);
+  font-size: 8.5pt;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: #60A5FA;
+}
+
+.system-card-arrow {
+  font-size: 7pt;
+  color: #64748B;
+  margin: 3pt 0 2pt;
+}
+
+.system-card-target {
+  font-size: 8pt;
+  font-weight: 600;
+  color: var(--white);
+}
+
+.system-card-body {
+  padding: 8pt 10pt;
+}
+
+.system-card-gap {
+  font-size: 7.5pt;
+  color: #DC2626;
+  font-weight: 500;
+  margin-bottom: 5pt;
+  font-family: var(--mono);
+}
+
+.system-card-desc {
+  font-size: 8pt;
+  color: #334155;
+  line-height: 1.5;
+  margin-bottom: 6pt;
+}
+
+.system-card-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 4pt;
+  background: var(--green-bg);
+  color: var(--green);
+  font-family: var(--mono);
+  font-size: 6.5pt;
+  font-weight: 600;
+  padding: 2pt 6pt;
+  border-radius: 2pt;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.system-card-status::before {
+  content: '●';
+  font-size: 5pt;
+}
+
+/* ── TIMELINE ── */
+.timeline {
+  margin: 12pt 0;
+  position: relative;
+  padding-left: 0;
+}
+
+.timeline-item {
+  display: grid;
+  grid-template-columns: 72pt 1fr;
+  gap: 12pt;
+  margin-bottom: 10pt;
+  align-items: start;
+}
+
+.timeline-year {
+  font-family: var(--mono);
+  font-size: 7.5pt;
+  font-weight: 600;
+  color: var(--white);
+  background: var(--blue);
+  padding: 3pt 8pt;
+  border-radius: 2pt;
+  text-align: center;
+  margin-top: 2pt;
+  letter-spacing: 0.06em;
+}
+
+.timeline-year.y2 { background: #1D4ED8; }
+.timeline-year.y3 { background: #1E40AF; }
+
+.timeline-content h4 {
+  font-size: 9pt;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 2pt;
+}
+
+.timeline-content p {
+  font-size: 8pt;
+  color: #475569;
+  margin: 0;
+}
+
+/* ── ASKS ── */
+.ask-list {
+  list-style: none;
+  margin: 10pt 0;
+}
+
+.ask-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10pt;
+  padding: 8pt 10pt;
+  border: 1pt solid var(--border);
+  border-radius: 4pt;
+  margin-bottom: 6pt;
+  background: var(--bg);
+}
+
+.ask-num {
+  font-family: var(--mono);
+  font-size: 9pt;
+  font-weight: 700;
+  color: var(--blue);
+  min-width: 14pt;
+  text-align: center;
+  padding-top: 1pt;
+}
+
+.ask-text {
+  font-size: 8.5pt;
+  color: var(--ink);
+  line-height: 1.5;
+}
+
+.ask-text strong {
+  font-weight: 600;
+  color: var(--ink);
+  display: block;
+  margin-bottom: 1pt;
+}
+
+/* ── DEMO BOX ── */
+.demo-box {
+  background: var(--ink);
+  color: var(--white);
+  border-radius: 6pt;
+  padding: 16pt 20pt;
+  margin: 14pt 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.demo-box::before {
+  content: '';
+  position: absolute;
+  top: 0; right: 0;
+  width: 120pt;
+  height: 100%;
+  background: linear-gradient(135deg, transparent, rgba(37,99,235,0.12));
+}
+
+.demo-box-label {
+  font-family: var(--mono);
+  font-size: 6.5pt;
+  letter-spacing: 0.18em;
+  color: #60A5FA;
+  text-transform: uppercase;
+  margin-bottom: 6pt;
+}
+
+.demo-box h3 {
+  font-size: 11pt;
+  font-weight: 700;
+  color: var(--white);
+  margin: 0 0 8pt;
+}
+
+.demo-box h3::before { display: none; }
+
+.demo-box p {
+  font-size: 8.5pt;
+  color: #94A3B8;
+  margin-bottom: 6pt;
+  line-height: 1.55;
+}
+
+.demo-url {
+  font-family: var(--mono);
+  font-size: 9pt;
+  font-weight: 600;
+  color: #60A5FA;
+  background: rgba(37,99,235,0.15);
+  display: inline-block;
+  padding: 4pt 10pt;
+  border-radius: 3pt;
+  margin-top: 4pt;
+  letter-spacing: 0.04em;
+}
+
+.demo-box ul {
+  list-style: none;
+  padding: 0;
+  margin: 10pt 0 0;
+}
+
+.demo-box ul li {
+  font-size: 8pt;
+  color: #CBD5E1;
+  padding: 3pt 0;
+  border-bottom: 0.5pt solid rgba(255,255,255,0.07);
+  padding-left: 12pt;
+  position: relative;
+}
+
+.demo-box ul li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: #60A5FA;
+  font-weight: 600;
+}
+
+/* ── SOVEREIGN BOX ── */
+.sovereign-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  border: 1.5pt solid var(--border);
+  border-radius: 6pt;
+  overflow: hidden;
+  margin: 14pt 0;
+}
+
+.sovereign-col {
+  padding: 12pt 14pt;
+}
+
+.sovereign-col:first-child {
+  background: var(--bg);
+  border-right: 1pt solid var(--border);
+}
+
+.sovereign-col-label {
+  font-family: var(--mono);
+  font-size: 6.5pt;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--steel);
+  margin-bottom: 6pt;
+}
+
+.sovereign-col h4 {
+  font-size: 9pt;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 4pt;
+}
+
+.sovereign-col p {
+  font-size: 8pt;
+  color: #475569;
+  margin: 0;
+}
+
+.sovereign-col.win {
+  background: var(--blue-light);
+}
+
+.sovereign-col.win .sovereign-col-label { color: var(--blue-dark); }
+.sovereign-col.win h4 { color: var(--blue-dark); }
+.sovereign-col.win p { color: #1E40AF; }
+
+/* ── FOOTER ── */
+.footer {
+  background: var(--ink);
+  color: #64748B;
+  padding: 10pt 32pt;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--mono);
+  font-size: 7pt;
+  letter-spacing: 0.08em;
+}
+
+.footer-brand {
+  color: #94A3B8;
+  font-weight: 500;
+}
+
+/* ── PRINT ── */
+@media print {
+  .hero, .demo-box, .footer { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .system-card-header { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .timeline-year { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .stat-box-value { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .callout, .callout-dark { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .sovereign-col.win { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .ask-list li { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .demo-url { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}
+
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-eyebrow">Partnership Proposal · Confidential · 2026-06-05</div>
+  <h1>IRONPROOF <span>×</span> Unity<br>Technologies</h1>
+  <div class="hero-subtitle">The Proof Layer for Certified Simulation</div>
+  <div class="hero-meta">
+    <div class="hero-meta-item">
+      <span class="hero-meta-label">From</span>
+      <span class="hero-meta-value">QreativeLab — Proof-Based Security Infrastructure</span>
+    </div>
+    <div class="hero-meta-item">
+      <span class="hero-meta-label">Contact</span>
+      <span class="hero-meta-value">dominik@qreativelab.io</span>
+    </div>
+    <div class="hero-meta-item">
+      <span class="hero-meta-label">Classification</span>
+      <span class="hero-meta-value">Confidential / BD Use Only</span>
+    </div>
+  </div>
+</div>
+
+<!-- BODY -->
+<div class="body">
+
+  <!-- THE PROBLEM -->
+  <div class="section">
+    <div class="section-label">01 — The Problem</div>
+    <h2>Unity Produces Rendered Frames. Not Proof.</h2>
+
+    <p>Unity is the most widely deployed simulation runtime on Earth. Boeing uses it for factory digital twins. The US Army uses it for synthetic training environments. CACI built a defense simulation platform on it. Every major aerospace and defense OEM has Unity somewhere in their certification pipeline.</p>
+
+    <div class="callout-dark">
+      <p>"Unity Industry does not appear in any DO-178C, IEC 61508, or STANAG 4671 certification authority registry as a qualified tool supplier. Neither does Unreal Engine. The gap is industry-wide."</p>
+    </div>
+
+    <p>Your defense customers are hitting this wall in production. They ask for traceable safety evidence. You deliver test logs. Test logs are human opinion. A tester's opinion formatted as a document is not a proof. In aerospace certification, in defense procurement, in sovereign AI compliance — it does not pass.</p>
+
+    <div class="stat-row">
+      <div class="stat-box">
+        <div class="stat-box-value">0</div>
+        <div class="stat-box-label">DO-178C qualified<br>tool registries listing Unity</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-box-value">0</div>
+        <div class="stat-box-label">Formal verification features<br>in Unity 6, 6.1, or 6.2</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-box-value">∞</div>
+        <div class="stat-box-label">Defense simulation contracts<br>blocked by this gap</div>
+      </div>
+    </div>
+
+    <p>The CACI contract — Unity's largest defense deal, confirmed 2024 — produced a simulation platform with no formal evidence layer. CACI cannot submit Unity outputs as certification artifacts to DND, DoD, or FAA. Unity is redirecting customers to manual testing reports. That is the 1990s answer.</p>
+  </div>
+
+  <!-- THE SYSTEMS -->
+  <div class="section">
+    <div class="section-label">02 — What QreativeLab Has Built</div>
+    <h2>Three Production Systems. Three Unity Gaps Closed.</h2>
+
+    <p>Not prototypes. Not research. Running production code, demonstrated at national security venues, applicable to Unity's industrial and defense pipeline today.</p>
+
+    <div class="system-grid">
+
+      <div class="system-card">
+        <div class="system-card-header">
+          <div class="system-card-name">PROOFNODE</div>
+          <div class="system-card-arrow">closes →</div>
+          <div class="system-card-target">DO-178C Evidence Gap</div>
+        </div>
+        <div class="system-card-body">
+          <div class="system-card-gap">GAP: Unity produces test logs, not proof</div>
+          <div class="system-card-desc">Z3 SMT formal verification on simulation code. Generates UNSAT certificates — mathematical proof that declared invariants were not violated. Integrates directly into the Unity Editor pipeline via <code>IProcessSceneWithReport</code>. DO-178C PDF evidence bundle on every CI push.</div>
+          <div class="system-card-status">Production · commit 759f017</div>
+        </div>
+      </div>
+
+      <div class="system-card">
+        <div class="system-card-header">
+          <div class="system-card-name">VERDICT ENGINE</div>
+          <div class="system-card-arrow">closes →</div>
+          <div class="system-card-target">Unity AI Behavioral Gap</div>
+        </div>
+        <div class="system-card-body">
+          <div class="system-card-gap">GAP: Unity Sentis has no constraint enforcement</div>
+          <div class="system-card-desc">Sits between Unity's AI inference layer and scene state mutation. Runs Z3 UNSAT proofs against AI output before execution. Any action violating a declared invariant is rejected with a proof certificate — not a runtime exception. ML-DSA-65 signed behavioral envelopes.</div>
+          <div class="system-card-status">Production · commit ffa1839</div>
+        </div>
+      </div>
+
+      <div class="system-card">
+        <div class="system-card-header">
+          <div class="system-card-name">NEXUM BRIDGE</div>
+          <div class="system-card-arrow">closes →</div>
+          <div class="system-card-target">Certifiable Twin Gap</div>
+        </div>
+        <div class="system-card-body">
+          <div class="system-card-gap">GAP: No invariant parity between firmware and twin</div>
+          <div class="system-card-desc">Exports 26 Z3 invariants from sovereign RISC-V robotics firmware as Unity <code>PhysicsConstraintProfile</code> objects. Every physics tick in the Unity scene validated against the firmware's certified operating envelope. The twin cannot do what the physical system cannot do.</div>
+          <div class="system-card-status">Firmware production · bridge 1 sprint</div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="callout">
+      <p>The result: Unity can tell DoD and DND customers something no simulation engine on Earth can currently say — "AI-driven simulation agents in our platform operate inside formally certified behavioral envelopes." This is a sales unlocker, not a feature.</p>
+    </div>
+  </div>
+
+  <!-- THE VISION -->
+  <div class="section">
+    <div class="section-label">03 — The Vision</div>
+    <h2>Three Years. One Platform Shift.</h2>
+
+    <div class="timeline">
+
+      <div class="timeline-item">
+        <div class="timeline-year">YEAR 1</div>
+        <div class="timeline-content">
+          <h4>Unity Verified Simulation</h4>
+          <p>The <code>unity-proof-layer</code> package ships as a Unity Verified Solutions integration. PROOFNODE invariant extraction on every scene save. DO-178C evidence bundles from every CI push. Unity Industry adds "Proof-Ready" as a licensed tier. QreativeLab is the infrastructure behind the checkbox. First artifact accepted by a national certification authority (Transport Canada, FAA, or DND DGLEPM).</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-year y2">YEAR 2</div>
+        <div class="timeline-content">
+          <h4>Certifiable Twin — NEXUM × Unity Industry</h4>
+          <p>The first robotics digital twin platform accepted as certification evidence by DND or CSA. NEXUM firmware invariants enforced in Unity Industry scenes in real time. Omniverse renders twins. We certify them. The differentiation axis shifts from visual fidelity to epistemic fidelity. Unity enters sovereign robotics programs inaccessible to any other simulation platform.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-year y3">YEAR 3–5</div>
+        <div class="timeline-content">
+          <h4>Unity Sovereign — Proof Intelligence OS</h4>
+          <p>The proof layer embedded in Unity's industrial runtime — not a plugin, a new product tier. Every Unity Sovereign simulation output is a signed, machine-verifiable proof bundle: UNSAT certificates, ML-DSA-65 chain of custody, DO-178C/STANAG evidence report, Proof Oracle API. Unity Sovereign becomes the only simulation platform whose outputs are legally admissible evidence.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- SOVEREIGN ADVANTAGE -->
+  <div class="section">
+    <div class="section-label">04 — The Canadian Structural Advantage</div>
+    <h2>What Omniverse Cannot Touch.</h2>
+
+    <div class="sovereign-box">
+      <div class="sovereign-col">
+        <div class="sovereign-col-label">NVIDIA Omniverse</div>
+        <h4>Renders beautiful twins.</h4>
+        <p>Cannot certify them. US-controlled infrastructure. Excluded from Canadian Digital Sovereignty procurement directives (2025). DND, NRC, CSA, and CSIS-adjacent programs cannot route certification pipelines through a US-controlled cloud. Structurally blocked from the sovereign defense market regardless of technical capability.</p>
+      </div>
+      <div class="sovereign-col win">
+        <div class="sovereign-col-label">Unity × QreativeLab</div>
+        <h4>Certifies them.</h4>
+        <p>Canadian-controlled proof stack. Post-quantum cryptography (ML-DSA-65). Infrastructure on Canadian soil (Fly.io YYZ). Eligible for DND, NRC, CSA sovereign contracts. IRAP co-funding available. The only simulation certification platform that satisfies Canada's 2025 Digital Sovereignty directives. Unity is American. QreativeLab is Canadian. Together: the answer every federal procurement officer needs.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- THE DEMO -->
+  <div class="demo-box">
+    <div class="demo-box-label">05 — The Killer Demo · Live in 14 Days</div>
+    <h3>unity-proof-layer-demo</h3>
+    <p>A public GitHub repo using Unity's own HDRP Boat Attack demo scene. Three declared invariants in a <code>ProofManifest.asset</code>. GitHub Actions CI pipeline running PROOFNODE verification on every commit. Live dashboard showing proof status and downloadable DO-178C evidence bundle PDFs.</p>
+    <p>One branch deliberately breaks a physics invariant. The CI catches it. The dashboard turns red. The PDF says: <strong style="color:#FCA5A5;">INVARIANT VIOLATION — PROOF FAILED — NOT CERTIFIABLE.</strong></p>
+    <div class="demo-url">unity-proof.fly.dev</div>
+    <ul>
+      <li>Uses Unity's own open-source scene — clones in 10 minutes</li>
+      <li>The pipeline your CACI contract team has been asking for, running in the Editor</li>
+      <li>DO-178C evidence artifacts from a git push — no additional tooling required</li>
+    </ul>
+  </div>
+
+  <!-- THE ASKS -->
+  <div class="section">
+    <div class="section-label">06 — Three Asks</div>
+    <h2>What We Need to Move Forward</h2>
+
+    <ul class="ask-list">
+      <li>
+        <span class="ask-num">01</span>
+        <span class="ask-text">
+          <strong>Accelerated Unity Verified Solutions Partner status</strong>
+          We have an active defense use case with a certification deadline. Standard 4–8 week timeline creates a gap in the customer's contract. Engineering documentation is ready.
+        </span>
+      </li>
+      <li>
+        <span class="ask-num">02</span>
+        <span class="ask-text">
+          <strong>Introduction to Unity Industry Engineering for a technical review of <code>unity-proof-layer</code></strong>
+          We want Unity's team to validate the integration hooks before the demo goes live. One 60-minute call with an engineer who knows <code>IProcessSceneWithReport</code> and Unity Cloud Build webhooks.
+        </span>
+      </li>
+      <li>
+        <span class="ask-num">03</span>
+        <span class="ask-text">
+          <strong>Co-sell conversation on one active Unity Industry aerospace or defense deal</strong>
+          Identify one deal currently blocked by certification requirements. We close the proof gap. Unity closes the contract. Revenue split to be discussed.
+        </span>
+      </li>
+    </ul>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <span class="footer-brand">IRONPROOF — QreativeLab</span>
+  <span>dominik@qreativelab.io</span>
+  <span>Confidential · 2026-06-05</span>
+</div>
+
+</body>
+</html>
